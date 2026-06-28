@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Saint-Gobain Portal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- LOGIN PAGE -->
+  <div id="loginPage" class="page">
+    <div class="login-card">
+
+      <div class="sg-logo">
+        <span class="logo-bar"></span>
+        SAINT-GOBAIN
+      </div>
+
+      <h2>Employee Portal</h2>
+      <p class="login-sub">Sign in with your credentials</p>
+
+      <div class="field">
+        <label>Username</label>
+        <input type="text" id="username" placeholder="Enter username" />
+      </div>
+
+      <div class="field">
+        <label>Password</label>
+        <input type="password" id="password" placeholder="••••••••" />
+      </div>
+
+      <p id="errorMsg" class="error"></p>
+      <button onclick="handleLogin()">Sign In</button>
+
+      <p class="footer-note">© 2025 Saint-Gobain. All rights reserved.</p>
+    </div>
+  </div>
+
+  <!-- DASHBOARD PAGE -->
+  <div id="dashboardPage" class="page hidden">
+
+    <nav class="navbar">
+      <div class="nav-left">
+        <span class="nav-logo">SAINT-GOBAIN</span>
+        <span class="nav-divider">|</span>
+        <span class="nav-title">Employee Dashboard</span>
+      </div>
+      <div class="nav-right">
+        <span id="welcomeUser"></span>
+        <button onclick="handleLogout()">Sign Out</button>
+      </div>
+    </nav>
+
+    <div class="content">
+      <div class="page-header">
+        <h1>Overview</h1>
+        <p>Welcome back. Here's what's happening today.</p>
+      </div>
+
+      <!-- Stat Cards -->
+      <div class="cards">
+        <div class="card">
+          <div class="card-top blue">
+            <span class="card-icon">👤</span>
+          </div>
+          <p class="card-label">Employees</p>
+          <p class="card-value">3,482</p>
+        </div>
+        <div class="card">
+          <div class="card-top red">
+            <span class="card-icon">📦</span>
+          </div>
+          <p class="card-label">Projects</p>
+          <p class="card-value">128</p>
+        </div>
+        <div class="card">
+          <div class="card-top sky">
+            <span class="card-icon">📋</span>
+          </div>
+          <p class="card-label">Open Tasks</p>
+          <p class="card-value">47</p>
+        </div>
+        <div class="card">
+          <div class="card-top teal">
+            <span class="card-icon">✅</span>
+          </div>
+          <p class="card-label">Completed</p>
+          <p class="card-value">310</p>
+        </div>
+      </div>
+
+      <!-- Activity Table -->
+      <div class="table-wrapper">
+        <div class="table-header">
+          <h2>Recent Activity</h2>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Employee</th>
+              <th>Department</th>
+              <th>Action</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td><td>Ravi Kumar</td><td>Operations</td><td>Submitted Report</td>
+              <td><span class="badge green">Done</span></td>
+            </tr>
+            <tr>
+              <td>2</td><td>Priya Sharma</td><td>HR</td><td>Updated Records</td>
+              <td><span class="badge blue">Completed</span></td>
+            </tr>
+            <tr>
+              <td>3</td><td>Anil Mehta</td><td>Logistics</td><td>Raised Request</td>
+              <td><span class="badge orange">Pending</span></td>
+            </tr>
+            <tr>
+              <td>4</td><td>Sunita Rao</td><td>Finance</td><td>Invoice Review</td>
+              <td><span class="badge red">Overdue</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
