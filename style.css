@@ -1,0 +1,310 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* ---------- SAINT-GOBAIN BRAND COLORS ---------- */
+:root {
+  --sg-blue:    #0F5299;   /* Primary Yale Blue */
+  --sg-sky:     #0195D6;   /* Electric Blue */
+  --sg-teal:    #4DB1B3;   /* Copper Blue */
+  --sg-red:     #E83430;   /* Laser Red */
+  --sg-dark:    #0a3060;   /* Darker navy for depth */
+  --bg:         #f4f6fa;
+  --white:      #ffffff;
+  --muted:      #6b7280;
+  --border:     #dde3ed;
+}
+
+body { background: var(--bg); color: #1a1a2e; }
+.hidden { display: none !important; }
+
+/* ---------- LOGIN PAGE ---------- */
+#loginPage {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(160deg, var(--sg-dark) 0%, var(--sg-blue) 60%, var(--sg-sky) 100%);
+}
+
+.login-card {
+  background: var(--white);
+  padding: 48px 42px 36px;
+  border-radius: 12px;
+  width: 400px;
+  box-shadow: 0 24px 64px rgba(10, 48, 96, 0.35);
+}
+
+/* Brand name on login */
+.sg-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--sg-blue);
+  margin-bottom: 32px;
+}
+
+.logo-bar {
+  width: 6px;
+  height: 22px;
+  background: linear-gradient(to bottom, var(--sg-red), var(--sg-sky));
+  border-radius: 3px;
+}
+
+.login-card h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--sg-dark);
+}
+
+.login-sub {
+  font-size: 14px;
+  color: var(--muted);
+  margin: 6px 0 28px;
+}
+
+/* Fields */
+.field { margin-bottom: 20px; }
+
+.field label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--sg-blue);
+  margin-bottom: 7px;
+}
+
+.field input {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: 7px;
+  font-size: 14px;
+  background: #f9fbff;
+  color: #1a1a2e;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.field input:focus {
+  outline: none;
+  border-color: var(--sg-sky);
+  box-shadow: 0 0 0 3px rgba(1, 149, 214, 0.15);
+  background: var(--white);
+}
+
+.error {
+  color: var(--sg-red);
+  font-size: 13px;
+  margin-bottom: 12px;
+  min-height: 18px;
+}
+
+.login-card button {
+  width: 100%;
+  padding: 13px;
+  background: var(--sg-blue);
+  color: white;
+  border: none;
+  border-radius: 7px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.login-card button:hover  { background: var(--sg-dark); }
+.login-card button:active { transform: scale(0.98); }
+
+.footer-note {
+  text-align: center;
+  font-size: 11px;
+  color: #b0b8c9;
+  margin-top: 28px;
+}
+
+/* ---------- NAVBAR ---------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--sg-dark);
+  padding: 0 32px;
+  height: 60px;
+  border-bottom: 3px solid var(--sg-red);
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.nav-logo {
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--white);
+}
+
+.nav-divider {
+  color: #4a6a96;
+  font-size: 18px;
+}
+
+.nav-title {
+  font-size: 14px;
+  color: #90afd4;
+  font-weight: 400;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.nav-right span {
+  font-size: 13px;
+  color: #90afd4;
+}
+
+.navbar button {
+  background: transparent;
+  border: 1.5px solid #2e5080;
+  color: #90afd4;
+  padding: 7px 18px;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.navbar button:hover {
+  border-color: var(--sg-sky);
+  color: var(--white);
+}
+
+/* ---------- CONTENT ---------- */
+.content {
+  padding: 36px 40px;
+  max-width: 1100px;
+}
+
+.page-header { margin-bottom: 28px; }
+
+.page-header h1 {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--sg-dark);
+}
+
+.page-header p {
+  font-size: 14px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+/* ---------- STAT CARDS ---------- */
+.cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  flex: 1;
+  min-width: 170px;
+  overflow: hidden;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 6px 24px rgba(15, 82, 153, 0.12);
+  transform: translateY(-2px);
+}
+
+.card-top {
+  height: 6px;
+}
+
+.card-top.blue { background: var(--sg-blue); }
+.card-top.red  { background: var(--sg-red); }
+.card-top.sky  { background: var(--sg-sky); }
+.card-top.teal { background: var(--sg-teal); }
+
+.card-icon  { display: block; font-size: 22px; padding: 18px 20px 4px; }
+.card-label { font-size: 12px; font-weight: 600; color: var(--muted); padding: 0 20px; text-transform: uppercase; letter-spacing: 0.05em; }
+.card-value { font-size: 30px; font-weight: 700; color: var(--sg-dark); padding: 4px 20px 20px; }
+
+/* ---------- TABLE ---------- */
+.table-wrapper {
+  background: var(--white);
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.table-header {
+  padding: 18px 24px 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.table-header h2 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--sg-dark);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  padding: 12px 20px;
+  background: #f0f5fc;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--sg-blue);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+td {
+  padding: 13px 20px;
+  font-size: 14px;
+  color: #374151;
+  border-bottom: 1px solid #f0f2f7;
+}
+
+tr:last-child td { border-bottom: none; }
+tr:hover td     { background: #f7faff; }
+
+/* ---------- BADGES ---------- */
+.badge {
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.badge.green  { background: #dcfce7; color: #15803d; }
+.badge.blue   { background: #dbeafe; color: #1d4ed8; }
+.badge.orange { background: #ffedd5; color: #c2410c; }
+.badge.red    { background: #fee2e2; color: #b91c1c; }
